@@ -93,6 +93,6 @@ export default {
 
 <style>
 .a-enter-vr {
-  position: fixed !important;
+  /*position: fixed !important;*/
 }
 </style>
