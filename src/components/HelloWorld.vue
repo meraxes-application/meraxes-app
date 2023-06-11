@@ -67,7 +67,6 @@
 </template>
 
 <script>
-import { aScene, aAssets, aEntity, aSky } from "aframe";
 // import {
 //   aScene,
 //   aAssets,
@@ -78,8 +77,6 @@ import { aScene, aAssets, aEntity, aSky } from "aframe";
 
 export default {
   name: "HelloWorld",
-
-  components: { aScene, aAssets, aEntity, aSky },
 
   props: {
     msg: String,
