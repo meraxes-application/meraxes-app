@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "aframe": "^1.4.2",
+    "aframe": "^1.2.0",
     "aframe-cursor-teleport-component": "^1.4.0",
     "vue": "^3.2.47"
   },

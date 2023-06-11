@@ -227,7 +227,7 @@ aframe-cursor-teleport-component@^1.4.0:
   resolved "https://registry.yarnpkg.com/aframe-cursor-teleport-component/-/aframe-cursor-teleport-component-1.4.0.tgz#aec825435b3d3cd48c1bb56e044eca74978a08fe"
   integrity sha512-KctLrz0LkBTPdNnR3obuBU2gI4l8oCaLHzBadcHFqW8+F2iaTYo2IXZb9duzgdW2fpOE4dgOx9Yx+buNPoFRsw==
 
-aframe@^1.4.2:
+aframe@^1.2.0:
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/aframe/-/aframe-1.4.2.tgz#0dd4c5a8be3e45053f3e9d9fcb574e9872efe698"
   integrity sha512-/sWCOB3ZNe5dWvMknIIMi5dwfU3rIyCiV+QkfYTDK36rNGivmUrmcdkregLmZk0OGHu9WAXoeUP3n0a23n6D0A==
@@ -303,7 +303,7 @@ custom-event-polyfill@^1.0.6:
   resolved "https://registry.yarnpkg.com/custom-event-polyfill/-/custom-event-polyfill-1.0.7.tgz#9bc993ddda937c1a30ccd335614c6c58c4f87aee"
   integrity sha512-TDDkd5DkaZxZFM8p+1I3yAlvM3rSr1wbrOliG4yJiwinMZN8z/iGL7BTlDkrJcYTmgUSb4ywVCc3ZaUtOtC76w==
 
-debug@ngokevin/debug#noTimestamp:
+"debug@github:ngokevin/debug#noTimestamp":
   version "2.2.0"
   resolved "https://codeload.github.com/ngokevin/debug/tar.gz/ef5f8e66d49ce8bc64c6f282c15f8b7164409e3a"
 
@@ -643,7 +643,7 @@ super-three@^0.147.1:
   resolved "https://registry.yarnpkg.com/super-three/-/super-three-0.147.1.tgz#3cccba0ad0962cc996bce47f88ebed9d1158059d"
   integrity sha512-H8yhlXqjscWpqYLhPQ/h3EfElNBxe3Ktp1tGVp13vBjIxF5sMVkAo2NpIDXkY8+MVhuTrA0ZN42IMNPdOKwKLg==
 
-three-bmfont-text@dmarcos/three-bmfont-text#21d017046216e318362c48abd1a48bddfb6e0733:
+"three-bmfont-text@github:dmarcos/three-bmfont-text#21d017046216e318362c48abd1a48bddfb6e0733":
   version "2.4.0"
   resolved "https://codeload.github.com/dmarcos/three-bmfont-text/tar.gz/21d017046216e318362c48abd1a48bddfb6e0733"
   dependencies:
