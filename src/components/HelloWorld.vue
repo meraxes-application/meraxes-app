@@ -10,7 +10,7 @@
         src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"
       ></audio>
       <img
-        id="city"
+        id="environment"
         crossorigin="anonymous"
         src="https://raw.githubusercontent.com/meraxes-application/meraxes-assets/main/environment-3-2.jpg"
       />
@@ -62,34 +62,14 @@
       ></a-entity>-->
 
     <!-- environment -->
-    <a-sky id="image-360" radius="10" src="#city"></a-sky>
+    <a-sky id="image-360" radius="10" src="#environment"></a-sky>
   </a-scene>
 </template>
 
-<script>
-// import {
-//   aScene,
-//   aAssets,
-//   aEntity,
-//   aSky,
-//   AFRAME,
-// } from "aframe-cursor-teleport-component";
-
-export default {
-  name: "HelloWorld",
-
-  props: {
-    msg: String,
-  },
-
-  setup() {
-    return {};
-  },
-};
-</script>
+<script></script>
 
 <style>
 .a-enter-vr {
-  /*position: fixed !important;*/
+  position: fixed !important;
 }
 </style>
