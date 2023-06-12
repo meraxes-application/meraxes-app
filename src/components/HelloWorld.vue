@@ -3,12 +3,9 @@
     cursor="rayOrigin: mouse"
     raycaster="objects: .clickable"
     renderer="colorManagement: true;"
+    loading-screen="backgroundColor: #312b70"
   >
     <a-assets>
-      <audio
-        id="click-sound"
-        src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"
-      ></audio>
       <img
         id="environment"
         crossorigin="anonymous"
@@ -66,10 +63,24 @@
   </a-scene>
 </template>
 
-<script></script>
+<script setup>
+import { onMounted } from "vue";
 
-<style>
-.a-enter-vr {
-  position: fixed !important;
-}
-</style>
+const playAudio = () => {
+  const audioUrl =
+    "https://github.com/meraxes-application/meraxes-assets/raw/main/music.mp3";
+  const audio = new Audio(audioUrl);
+  try {
+    audio.play();
+  } catch (error) {
+    console.log("Erro ao reproduzir o áudio:", error);
+  }
+};
+
+onMounted(() => {
+  setTimeout(() => {
+    const playButton = document.querySelector(".a-enter-vr-button");
+    playButton.addEventListener("click", playAudio);
+  }, 5000);
+});
+</script>
