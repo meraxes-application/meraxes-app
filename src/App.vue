@@ -1,7 +1,7 @@
 <template>
-  <HelloWorld />
+  <VirtualEnvironment />
 </template>
 
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import VirtualEnvironment from "./components/VirtualEnvironment.vue";
 </script>

@@ -6,11 +6,7 @@
     loading-screen="backgroundColor: #312b70"
   >
     <a-assets>
-      <img
-        id="environment"
-        crossorigin="anonymous"
-        src="https://raw.githubusercontent.com/meraxes-application/meraxes-assets/main/environment-3-2.jpg"
-      />
+      <img id="environment" crossorigin="anonymous" :src="imageUrl" />
     </a-assets>
 
     <!-- player -->
@@ -50,32 +46,38 @@
       ></a-entity>
     </a-entity>
 
-    <!-- scene geometry -->
-    <!-- <a-entity
-        class="collision"
-        position="0 -.05 0"
-        geometry="primitive: box; width: 8; height: .1; depth: 8"
-        material="color: #000000"
-      ></a-entity>-->
-
-    <!-- environment -->
     <a-sky id="image-360" radius="10" src="#environment"></a-sky>
   </a-scene>
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
+import { virtualEnvironment } from "../services";
+
+const environment = ref();
+const imageUrl = ref();
+const audioUrl = ref();
 
 const playAudio = () => {
-  const audioUrl =
-    "https://github.com/meraxes-application/meraxes-assets/raw/main/music.mp3";
-  const audio = new Audio(audioUrl);
+  const audio = new Audio(audioUrl.value);
   try {
     audio.play();
   } catch (error) {
     console.log("Erro ao reproduzir o áudio:", error);
   }
 };
+
+onBeforeMount(async () => {
+  environment.value = await virtualEnvironment.getEnvironment();
+  const imageId = environment.value.data.attributes.image.data.id;
+  const audioId = environment.value.data.attributes.audio.data.id;
+
+  const image = await virtualEnvironment.getImage(imageId);
+  imageUrl.value = image.data.attributes.file.data.attributes.url;
+
+  const audio = await virtualEnvironment.getAudio(audioId);
+  audioUrl.value = audio.data.attributes.file.data.attributes.url;
+});
 
 onMounted(() => {
   setTimeout(() => {

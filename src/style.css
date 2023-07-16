@@ -2,6 +2,12 @@
     position: fixed !important;
 }
 
+.a-enter-vr-button {
+    &:hover {
+        background-color: #312b70;
+    }
+}
+
 .a-loader-title {
     /*background-color: red;*/
 }
